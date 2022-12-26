@@ -7,8 +7,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class WikiTest {
 
     @Test
-void WikiSeach () {
-//Откройте страницу Selenide в Github
+    void wikiSeach() {
+        //Откройте страницу Selenide в Github
         open("https://github.com/selenide/selenide");
         //Перейдите в раздел Wiki проекта
         $("#wiki-tab").click();
@@ -18,9 +18,9 @@ void WikiSeach () {
         // Откройте страницу SoftAssertions
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
         // проверьте что внутри есть пример кода для JUnit5
-       $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
+        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
         sleep(10000);
 
-}
+    }
 
 }
